@@ -1,8 +1,8 @@
-# 使用官方 PHP image，內建 Apache
-FROM php:8.2-apache
+FROM php:8.2-cli
 
-# 將專案檔案複製進 container 中
-COPY . /var/www/html
+WORKDIR /app
+COPY . .
 
-# 開放 Apache 預設埠
-EXPOSE 80
+EXPOSE 8000
+
+CMD ["php", "-S", "0.0.0.0:8000"]

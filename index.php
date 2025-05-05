@@ -1,2 +1,3 @@
 <?php
-echo "Hello from Dockerized PHP!";
+header('Content-Type: application/json');
+echo json_encode(['message' => 'Hello from PHP API']);
